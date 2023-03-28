@@ -24,9 +24,40 @@ const inputQuantity = document.getElementById("quantity");
 const inputLocation = document.getElementsByName("location");
 
 
+// Variables pour les messages d'erreur
+const nameErrorMsg = document.getElementById("nameErrorMsg");
+
+
 
 // RegEx 
-const regExName = 
+const regExName = new RegExp(/^[a-zA-Zà-üÀ-Ü]{2,32}$/);
+
+// Fonctions pour appliquer des conditions de validation du formulaire à l'aide des RegEx
+
+// Fonction pour vérifier le champ du prénom
+function firstNameTest() {
+  inputFirstName.addEventListener("change", () => {
+      if (regExName.test(first.value)) {
+          firstNameErrorMsg.textContent = "";
+      } else {
+          firstNameErrorMsg.textContent = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
+      }
+  });
+}
+firstNameTest();
+
+// Fonction pour vérifier le champ du nom
+function lastNameTest() {
+  inputLastName.addEventListener("change", () => {
+      if (regExName.test(first.value)) {
+          lastNameErrorMsg.textContent = "";
+      } else {
+          lastNameErrorMsg.textContent = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
+      }
+  });
+}
+lastNameTest();
+
 
 
 
