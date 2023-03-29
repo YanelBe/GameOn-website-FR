@@ -183,6 +183,11 @@ main {
   padding-top: 10px;
 }
 
+.content-off {
+  animation-name: modalclose;
+  animation-duration: var(--modal-duration);
+}
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
@@ -226,6 +231,12 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
+
+.error-text {
+  font-size: 0.8em;
+  color: #e54858;
+}
+
 /* 
 input[data-error]::after {
     content: attr(data-error);
@@ -524,6 +535,16 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes modalclose {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
   }
 }
 

@@ -25,12 +25,15 @@ const inputLocation = document.getElementsByName("location");
 
 
 // Variables pour les messages d'erreur
-const nameErrorMsg = document.getElementById("nameErrorMsg");
+const firstNameErrorMsg = document.getElementById("firstNameErrorMsg");
+const lastNameErrorMsg = document.getElementById("lastNameErrorMsg");
+const errorData = document.querySelectorAll("formData");
 
 
 
 // RegEx 
 const regExName = new RegExp(/^[a-zA-Zà-üÀ-Ü]{2,32}$/);
+const regExMail = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$");
 
 // Fonctions pour appliquer des conditions de validation du formulaire à l'aide des RegEx
 
@@ -49,7 +52,7 @@ firstNameTest();
 // Fonction pour vérifier le champ du nom
 function lastNameTest() {
   inputLastName.addEventListener("change", () => {
-      if (regExName.test(first.value)) {
+      if (regExName.test(last.value)) {
           lastNameErrorMsg.textContent = "";
       } else {
           lastNameErrorMsg.textContent = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
@@ -74,6 +77,13 @@ function launchModal() {
 
 // Fonction pour fermer la modale
 function closeModal() {
-  modalbg.style.display = "none";
+  // On rajoute une classe content-off pour activer l'animation de fermeture de modale
+  modalbg.classList.add("content-off");
+  modalbg.addEventListener("animationend", function() {
+    modalbg.style.display = "none";
+    modalbg.classList.remove("content-off");
+  }, {
+    once: true
+  });
 }
 
