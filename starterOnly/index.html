@@ -99,6 +99,7 @@
                   id="email"
                   name="email"
                 /><br>
+                <p id="emailErrorMsg" class="error-text"><!-- Message d'erreur --></p>
               </div>
 
               <!--Champ formulaire "Date de naissance"-->
@@ -111,6 +112,7 @@
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <p id="birthdateErrorMsg" class="error-text"><!-- Message d'erreur --></p>
               </div>
 
               <!--Champ formulaire "Question number"-->
@@ -118,6 +120,7 @@
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p id="quantityErrorMsg" class="error-text"><!-- Message d'erreur --></p>
               </div>
 
               <!--Champ formulaire "Question input radio"-->
@@ -190,6 +193,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p id="locationErrorMsg" class="error-text"><!-- Message d'erreur --></p>
               </div>
 
               <!--Cases à cocher avant l'envoi du formulaire-->
@@ -205,6 +209,7 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
+                <p id="termsOfUseErrorMsg" class="error-text"><!-- Message d'erreur --></p>
                 <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">

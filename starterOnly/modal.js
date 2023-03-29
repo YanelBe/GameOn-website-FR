@@ -27,6 +27,10 @@ const inputLocation = document.getElementsByName("location");
 // Variables pour les messages d'erreur
 const firstNameErrorMsg = document.getElementById("firstNameErrorMsg");
 const lastNameErrorMsg = document.getElementById("lastNameErrorMsg");
+const emailErrorMsg = document.getElementById("emailErrorMsg");
+const quantityErrorMsg = document.getElementById("quantityErrorMsg");
+const locationErrorMsg = document.getElementById("locationErrorMsg");
+const termsOfUseErrorMsg = document.getElementById("termsOfUseErrorMsg");
 const errorData = document.querySelectorAll("formData");
 
 
@@ -61,6 +65,29 @@ function lastNameTest() {
 }
 lastNameTest();
 
+// Fonction pour vérifier le champ de l'adresse email
+function emailTest() {
+  inputEmail.addEventListener("change", () => {
+    if (regExMail.test(email.value)) {
+      emailErrorMsg.textContent = "";
+    } else {
+      emailErrorMsg.textContent = "Veuillez entrer une adresse email valide.";
+    }
+  });
+}
+emailTest();
+
+// Fonction pour vérifier le champ de la date de naissance
+function birthdateTest() {
+  inputBirthdate.addEventListener("change", () => {
+    if (regExBirthdate.test(birthdate.value)) {
+      birthdateErrorMsg.textContent = "";
+    } else {
+      birthdateErrorMsg.textContent = "Veuillez entrer une date de naissance valide.";
+    }
+  });
+}
+birthdateTest();
 
 
 
