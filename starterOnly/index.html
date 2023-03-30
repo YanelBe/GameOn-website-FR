@@ -51,11 +51,12 @@
           je m'inscris
         </button>
       </div>
-
+      <!--Modale-->
       <div class="bground">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
+            <!--Début du formulaire-->
             <form
               name="reserve"
               action="index.html"
@@ -197,20 +198,17 @@
               </div>
 
               <!--Cases à cocher avant l'envoi du formulaire-->
-              <div
-                class="formData">
-                <input
-                  class="checkbox-input"
-                  type="checkbox"
-                  id="checkbox1"
-                  checked
-                />
+              <div class="formData">
+                <!--Case des conditions d'utilisation (obligatoire)-->
+                <input class="checkbox-input" type="checkbox" id="checkbox1"/>
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <p id="termsOfUseErrorMsg" class="error-text"><!-- Message d'erreur --></p>
                 <br>
+                
+                <p id="termsOfUseErrorMsg" class="error-text"><!-- Message d'erreur --></p>
+                <!--Case newsletter (non obligatoire)-->
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
@@ -219,13 +217,20 @@
                 <br>
               </div>
               <input
-                class="btn-submit"
+                class="btn-submit button"
                 type="submit"
-                class="button"
                 value="C'est parti"
               />
             </form>
           </div>
+
+          <!--Modale après la validation du formulaire-->
+          <div>
+            <div id="success">
+              <!--Message de réussite-->
+            </div>
+          </div>
+
         </div>
       </div>
     </main>
