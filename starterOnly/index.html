@@ -45,7 +45,7 @@
           </button>
         </div>
         <div class="hero-img">
-          <img src="./bg_img.jpg" alt="img" />
+          <img src="./bg_img.jpg" alt="Femme de dos tenant une manette de console et levant les bras" />
         </div>
         <button class="btn-signup modal-btn">
           je m'inscris
@@ -58,10 +58,10 @@
           <div class="modal-body">
             <!--Début du formulaire-->
             <form
+              id="myForm"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
             >
               <!--Champ formulaire "Prénom"-->
               <div
@@ -222,15 +222,16 @@
                 value="C'est parti"
               />
             </form>
-          </div>
 
-          <!--Modale après la validation du formulaire-->
-          <div>
-            <div id="success">
-              <!--Message de réussite-->
+            <div id="success" class="hidden">
+              <p class="success-message">Merci pour <br>votre inscription</p>
+              <input
+                class="btn-submit btn-close button"
+                type="submit"
+                value="Fermer"
+              />
             </div>
           </div>
-
         </div>
       </div>
     </main>
