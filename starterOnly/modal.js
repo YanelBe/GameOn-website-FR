@@ -61,7 +61,7 @@ modalBtnClose.addEventListener("click", closeModal);
 
 // launch modal form
 function launchModal() {
-  modalbg.style.display = "block";
+  modalbg.style.display = "block";  
 }
 
 // Fonction pour fermer la modale

@@ -517,6 +517,7 @@ footer {
 
 @media screen and (max-width: 1200px) {
 
+
   .main-navbar {
     display: flex;
     flex-direction: column;
@@ -533,6 +534,7 @@ footer {
 
   .topnav a {
     display: none;
+    margin: 0;
   }
 
   .topnav a.active {
@@ -561,6 +563,8 @@ footer {
 @media screen and (max-width: 540px) {
 
   .topnav {
+    display: flex;
+    justify-content: space-between;
     height: 60px;
   }
 
@@ -575,6 +579,15 @@ footer {
   .topnav a.icon {
     float: right;
     display: block;
+    margin: 0;
+  }
+
+  .main-navbar a {
+    font-size: 0.8rem;
+  }
+
+  .header-logo img {
+    width: 140px;
   }
 
 }
@@ -644,6 +657,16 @@ footer {
 
 @media screen and (max-width: 540px) {
 
+  body {
+    padding: 0px 10px;
+  }
+
+  main {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .content {
     display: flex;
     justify-content: center;
@@ -652,12 +675,17 @@ footer {
     top: 60px;
   }
 
+  .hero-content {
+    padding: 0;
+  }
+
   .hero-headline {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 
   .hero-text {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    margin-top: 30px;
   }
 
   .formData input {
@@ -673,6 +701,16 @@ footer {
   .checkbox2-label {
     font-size: 16px;
     text-align: left;
+  }
+
+  .btn-signup.modal-btn {
+    font-size: 1rem;
+    padding: 8px 35px;
+  }
+
+  .copyrights {
+    margin-top: 6px;
+    font-size: 0.6rem;
   }
 
  }
